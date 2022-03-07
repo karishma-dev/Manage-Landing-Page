@@ -1,6 +1,7 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navItem = document.querySelectorAll(".nav-item");
+const nav = document.getElementById("nav");
 const form = document.forms.email;
 const inputForm = document.getElementById("email-input");
 const error = document.querySelector(".error");
@@ -8,12 +9,14 @@ const error = document.querySelector(".error");
 hamburger.addEventListener("click", function(){
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
+  nav.classList.toggle("active");
 })
 
 navItem.forEach((item) => {
      item.addEventListener("click", function(){
        hamburger.classList.remove("active")
        navMenu.classList.remove("active");
+       nav.classList.remove("active");
      })
 });
 

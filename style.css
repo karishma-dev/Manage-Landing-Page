@@ -12,7 +12,7 @@
     
     --Dark-Grayish-Blue: hsl(227, 12%, 61%);
     --Very-Dark-Blue: hsl(233, 12%, 13%);
-    --Very-Pale-Red: hsl(13, 100%, 96%);
+    --Very-Pale-Red: #ffefeb;
     --Very-Light-Gray: hsl(0, 0%, 98%);
     
 }
@@ -76,7 +76,7 @@ p{
     align-items: center;
     height: fit-content;
     padding: 20px;
-    min-width: 320px;
+    min-width: 400px;
 }
 .col-1,.col-2,.col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .grid-col {
     grid-column: span 12;
@@ -84,15 +84,15 @@ p{
 
 /* ========= Navigation Bar ========= */
 nav{
+    min-width: 400px;
+}
+nav.active{
     background-color: white;
     position: fixed;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
-    z-index:2;
-}
-nav.active{
-    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 2;
 }
 .nav-menu{
     background-color: rgba(151, 149, 149, 0.12);
@@ -149,13 +149,16 @@ nav .get-started{
 }
 
 /* ========= Header ========= */
+header{
+    min-width: 400px;
+}
 .header-img{
     background-image: url("images/illustration-intro.svg");
     background-size: 100% 100%;
     width: 100%;
     max-width: 600px;
     min-height: 60vh;
-    margin: 80px auto 0;
+    margin: 0 auto;
 }
 #header-heading{
     font-size: 3rem;
@@ -169,6 +172,7 @@ h2{
 /* ========= Main ========== */
 main{
     margin: 30px 0;
+    min-width: 400px;
 }
 #main-pattern{
     top: 650px;
@@ -185,11 +189,12 @@ main{
 .info-heading{
     background-color: var(--Very-Pale-Red);
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 24px 0 0 24px;
     margin: 20px auto;
     position: relative;
     z-index: -1;
+    font-size: 1.2rem;
 }
 .info-heading span{
     background-color: var(--Bright-Red);
@@ -202,7 +207,7 @@ main{
     top: 0;
 }
 .info-col:last-of-type .info-heading{
-    padding-left: 50px;
+    padding-left: 70px;
 }
 .info-col p{
     text-align: start;
@@ -234,7 +239,7 @@ main{
     top: -70px;
     width: 100px;
 }
-h4{
+h3{
     font-size: 1.5rem;
     margin-top: -50px;
     margin-bottom: 15px;
@@ -256,6 +261,7 @@ h4{
     background-position: left center;
     color: white;
     padding: 20px;
+    min-width: 400px;
 }
 .simplify-bg h2{
     font-size: 2.7rem;
@@ -276,6 +282,7 @@ h4{
 .footer-bg{
     background-color: var(--Very-Dark-Blue);
     padding: 40px 0 0;
+    min-width: 400px;
 }
 form{
     order: 0;
@@ -383,6 +390,7 @@ form button:hover{
     padding: 7px; 
     background-color: var(--Very-Dark-Blue);
     color: var(--Very-Light-Gray);
+    min-width: 400px;
 }
 .attribution a { 
     color: hsl(71, 70%, 84%); 
@@ -454,10 +462,11 @@ form button:hover{
         padding: 10px 20px;
     }
     .nav-bg{
-        background-color: white;
+        /* background-color: white; */
+        background-color: transparent;
     }
     nav{
-        position: fixed;
+        position: relative;
         top: 0;
         margin: 0 auto;
     }
@@ -570,7 +579,7 @@ form button:hover{
         margin: 0;
         text-align: center;
     }
-    .testimonial h4, .testimonial p{
+    .testimonial h3, .testimonial p{
         text-align: center;
     }
     .swiper-pagination{
