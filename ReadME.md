@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/Krrish105/Manage-Landing-Page](https://github.com/Krrish105/Manage-Landing-Page)
-- Live Site URL: [http://Krrish105.github.io/Manage-Landing-Page](https://Krrish105.github.io/Manage-Landing-Page)
+- Live Site URL: [https://Krrish105.github.io/Manage-Landing-Page](https://Krrish105.github.io/Manage-Landing-Page)
 
 ## My process
 
