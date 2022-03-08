@@ -1,3 +1,4 @@
+// Variables
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const navItem = document.querySelectorAll(".nav-item");
@@ -6,12 +7,14 @@ const form = document.forms.email;
 const inputForm = document.getElementById("email-input");
 const error = document.querySelector(".error");
 
+// Event Listener to open/close navigation menu in mobile using hamburger icon
 hamburger.addEventListener("click", function(){
   hamburger.classList.toggle("active");
   navMenu.classList.toggle("active");
   nav.classList.toggle("active");
 })
 
+// Event Listener to close navigation menu in mobile using Navigation items
 navItem.forEach((item) => {
      item.addEventListener("click", function(){
        hamburger.classList.remove("active")
@@ -20,6 +23,7 @@ navItem.forEach((item) => {
      })
 });
 
+// Swiper for testinomials
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 0,
@@ -31,7 +35,7 @@ const swiper = new Swiper(".mySwiper", {
       },
       992: {
         initialSlide: 1,
-        slidesPerView: 2.38,
+        slidesPerView: 2.43,
         spaceBetween: 40,
       },
     },
@@ -46,7 +50,9 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
+// Regular Expression for validity of email
 let regex = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+
 // EventListener for form to show error on wrong email format
 form.addEventListener("submit", function(event){
 
