@@ -33,17 +33,18 @@ li{
 }
 body{
     overflow-x: hidden;
+    position: relative;
 }
 .pattern{
-    background-color: var(--Very-Pale-Red);
-    width: 350px;
-    height: 580px;
     position: absolute;
-    border-radius: 300px 300px 0 0;
-    transform: rotate(230deg);
-    z-index: -1;
-    top: -50px;
+    background: url('./images/bg-tablet-pattern.svg') no-repeat;
+    background-position: left bottom;
+    background-size: 450px;
+    width: 318px;
+    height: 350px;
+    top: -11px;
     right: 0;
+    z-index: -1;
 }
 p{
     color: var(--Dark-Grayish-Blue);
@@ -51,6 +52,7 @@ p{
     line-height: 2.2rem;
     width: 95%;
     margin: 0 auto 40px;
+    min-width: 200px;
 }
 .get-started{
     background-color: var(--Bright-Red);
@@ -70,13 +72,13 @@ p{
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    width: 100%;
     column-gap: 20px;
     max-width: 700px;
     margin: 0 auto;
     align-items: center;
     height: fit-content;
     padding: 20px;
-    min-width: 400px;
 }
 .col-1,.col-2,.col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .grid-col {
     grid-column: span 12;
@@ -84,15 +86,17 @@ p{
 
 /* ========= Navigation Bar ========= */
 nav{
-    min-width: 400px;
+    min-width: 420px;
+    position: relative;
 }
 nav.active{
-    background-color: white;
+    background-color: rgba(221, 220, 220, 0.3);
     position: fixed;
     left: 50%;
     transform: translate(-50%);
     width: 100vw;
     z-index: 2;
+    min-width: 460px;
 }
 .nav-menu{
     background-color: rgba(151, 149, 149, 0.12);
@@ -102,6 +106,7 @@ nav.active{
     top: 78px;
     left: -2000px;
     padding: 0 20px;
+    min-width: 460px;
 }
 .nav-menu.active{
     left: 50%;
@@ -150,12 +155,12 @@ nav .get-started{
 
 /* ========= Header ========= */
 header{
-    min-width: 400px;
+    min-width: 460px;
 }
 .header-img{
     background-image: url("images/illustration-intro.svg");
     background-size: 100% 100%;
-    width: 100%;
+    width: 80%;
     max-width: 600px;
     min-height: 60vh;
     margin: 0 auto;
@@ -172,29 +177,44 @@ h2{
 /* ========= Main ========== */
 main{
     margin: 30px 0;
-    min-width: 400px;
+    min-width: 460px;
+    position: relative;
+    overflow-x: hidden;
 }
 #main-pattern{
-    top: 650px;
-    height: 500px;
-    width: 250px;
-    right: -150px;
+    position: absolute;
+    background-size: 340px 350px;
+    top: 30px;
+    height: 300px;
+    width: 270px;
+    right: 0;
+    transform: rotate(360deg);
 }
 .info-container.grid-container{
     padding: 0 0 0 20px;
+    margin: 0 auto;
+    min-width: 460px;
+    max-width: 700px;
 }
 .info-col{
     padding: 0 0 0 20px;
 }
 .info-heading{
     background-color: var(--Very-Pale-Red);
-    width: 100%;
-    padding: 10px 30px;
+    padding: 10px 0;
     border-radius: 24px 0 0 24px;
-    margin: 20px auto;
+    margin: 0 auto;
     position: relative;
     z-index: -1;
     font-size: 1.2rem;
+    height: fit-content;
+}
+.info-heading p{
+    font-size: 1rem;
+    color: var(--Dark-Blue);
+    padding: 0;
+    margin: 0 0 0 100px;
+    width: 75%;
 }
 .info-heading span{
     background-color: var(--Bright-Red);
@@ -206,28 +226,32 @@ main{
     left: 0;
     top: 0;
 }
-.info-col:last-of-type .info-heading{
-    padding-left: 70px;
+.info-col:last-of-type .info-heading p{
+    margin-left: 80px;
 }
 .info-col p{
     text-align: start;
 }
 
 /* =========== Tesimonials ========== */
+.testimonial-container.grid-container{
+    min-width: 300px;
+}
 .mySwiper{
     width: 100%;
+    min-width: 200px;
+    max-width: 500px;
 }
 .swiper-wrapper{
     display: flex;
     width: fit-content !important;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 400px auto 400px;
     padding: 0 20px 0 10px;
 }
 .swiper-slide{
     width: fit-content !important;
     max-width: 400px;
-    margin: 0px 30px 0 30px;
+    margin: 100px 30px 50px 30px;
     border-radius: 20px;
 }
 .testimonial{
@@ -261,7 +285,7 @@ h3{
     background-position: left center;
     color: white;
     padding: 20px;
-    min-width: 400px;
+    min-width: 460px;
 }
 .simplify-bg h2{
     font-size: 2.7rem;
@@ -282,7 +306,7 @@ h3{
 .footer-bg{
     background-color: var(--Very-Dark-Blue);
     padding: 40px 0 0;
-    min-width: 400px;
+    min-width: 460px;
 }
 form{
     order: 0;
@@ -371,7 +395,6 @@ form button:hover{
     filter: invert(58%) sepia(66%) saturate(4027%) hue-rotate(336deg) brightness(95%) contrast(99%);
 }
 #footer-logo{
-    filter: brightness(0) invert(1);
     grid-column: 2/12;
     order: 3;
     margin: 10px auto;
@@ -390,13 +413,28 @@ form button:hover{
     padding: 7px; 
     background-color: var(--Very-Dark-Blue);
     color: var(--Very-Light-Gray);
-    min-width: 400px;
+    min-width: 460px;
 }
 .attribution a { 
     color: hsl(71, 70%, 84%); 
 }
 
 /* ========= Media Queries ========= */
+@media (max-width: 460px) {
+    .pattern{
+        background-size: 350px;
+        top: -50px;
+        left: 45vw;
+        height: 350px;
+        width: 200px;
+    }
+    #main-pattern{
+        top: 0;
+        left: 100vw;
+        height: 400px;
+        width: 250px;
+    }
+}
 @media (min-width: 1000px) {
 
     *{
@@ -450,6 +488,18 @@ form button:hover{
         grid-column: span 12;
     }
 
+    .pattern{
+        position: absolute;
+        background: url('./images/bg-tablet-pattern.svg') no-repeat;
+        background-position: left bottom;
+        background-size: 550px;
+        width: 400px;
+        height: 450px;
+        top: -11px;
+        right: 0;
+        z-index: -1;
+    }
+
     /* ========= Navigation Bar ========= */
     .hamburger{
         display: none;
@@ -462,7 +512,6 @@ form button:hover{
         padding: 10px 20px;
     }
     .nav-bg{
-        /* background-color: white; */
         background-color: transparent;
     }
     nav{
@@ -513,12 +562,18 @@ form button:hover{
     }
 
     /* ========== Info ============ */
+    main{
+        overflow: hidden;
+    }
     .info-container.grid-container{
         align-items: baseline;
     }
+    .info-container.grid-container{
+        max-width: 1280px;
+    }
     .info-heading{
         background-color: transparent;
-        padding: 10px 0 10px 100px;
+        padding: 10px 0 10px;
     }
     .info-heading span{
         position: absolute;
@@ -526,18 +581,18 @@ form button:hover{
         top: 0;
     }
     .info-col:last-of-type .info-heading{
-        padding-left: 100px;
+        padding-left: 20px;
     }
     .info-col p{
         margin-left: 100px;    
         max-width: 75%;
     }
     #main-pattern{
-        top: 850px;
-        height: 600px;
-        width: 350px;
-        left: -90px;
-        transform: rotate(50deg);
+        top: 250px;
+        height: 500px;
+        width: 400px;
+        left: -100px;
+        transform: rotate(190deg);
     }
 
     /* =========== Testimonials ============ */
@@ -567,6 +622,7 @@ form button:hover{
         width: 100%;
         height: 100%;
         overflow-x: auto;
+        max-width: 1280px;
     }
     .swiper-slide{
         width: fit-content !important;
@@ -657,8 +713,10 @@ form button:hover{
 }
 @media (min-width: 1300px) {
     .pattern{
-        width: 500px;
-        height: 1200px;
-        top: -450px;
+        background-size: 100% 100%;
+        width: 700px;
+        height: 700px;
+        top: -200px;
+        left: 53vw;
     }
 }
